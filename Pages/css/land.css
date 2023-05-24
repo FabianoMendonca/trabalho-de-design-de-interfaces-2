@@ -9,18 +9,56 @@
     background: url("../../assets/bg.jpg");
     background-size: cover;
 }
+.mainContent{
+  margin: 1rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: 2fr 2fr 1fr;
+  grid-column: 1fr 1fr 1fr;
+  grid-template-areas:" p p p "
+                      " . . . "
+                      " . . buttonCont";
+  height: 90%;
+}
+.mainContent p{
+  grid-area: p;
+}
 
 .invite{
     width: 50vw;
-    height: 60vh;
+    height: 70vh;
+    font-size: 1rem;
     background-color: var(--main-bg-nav-color);
     border-radius: 12px;
     animation: neon 3s linear infinite;
 }
+.continuarButton button{
+
+  background: none;
+  appearance: none;
+  box-shadow: none;
+  border: none;
+}
+.continuarButton {
+  grid-area: buttonCont;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 120px;
+  border-radius: 6px;
+  background: #ffffff67;
+  display: grid;
+  text-decoration: none;
+  place-items: center;
+}
+@media (width < 768px) {
+  .invite{
+    width: 90vw;
+    height: 80vh;
+    font-size: .8rem;
+  }
+}
+
 /* neon invite animação */
-
-
-
 @keyframes neon{
     0%{
         -webkit-box-shadow: 0px 0px 34px 3px rgba(22,117,52,1);
