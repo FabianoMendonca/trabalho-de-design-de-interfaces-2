@@ -1,0 +1,142 @@
+@import "../css/styled.css";
+
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    background: url("../../assets/bg.jpg");
+    background-size: cover;
+}
+
+.fieldset-form{
+    /* background-color: rgba(0,0,0, 0.5); */
+    background-color:var(--main-bg-nav-color);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90vw;
+    min-width: 200px;
+    padding: 12px;
+    display: grid;
+    grid-gap: 4px;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas:
+    "nome nome nome"
+    "inputNome  inputNome inputNome"
+    "emailLabel emailLabel emailLabel"
+    "emailInput emailInput emailInput"
+    "enderecoLabel enderecoLabel endCompLabel"
+    "enderecoInput enderecoInput endCompInput"
+    "cidadeLabel telefoneLabel  . "
+    "cidadeInput telefoneInput  . "
+    "senha . ."
+    "inputSenha . ."
+    "repetInputSenha . ."
+    ". . ."
+    "cadastroButton . .";
+    font-size: .8rem;
+}
+
+.cidadeLabel{
+    grid-area: cidadeLabel;
+}
+.cidadeInput{
+    grid-area: cidadeInput;
+}
+.enderecoLabel{
+    grid-area: enderecoLabel;
+}
+.endCompLabel{
+    grid-area: endCompLabel;
+}
+.endCompInput{
+    grid-area: endCompInput;
+}
+.enderecoInput{
+    grid-area: enderecoInput;
+
+}
+.fieldset-form input{
+    outline: 0;
+    padding: 4px;
+    font-size: .8rem;
+    border: none;
+}
+.fieldset-form input:focus{
+    border: 0 none;
+    outline: 0;
+}
+.telefoneLabel{
+    grid-area: telefoneLabel;
+}
+.telefoneInput{
+    grid-area: telefoneInput;
+}
+.nomeLabel{
+    grid-area:nome;
+}
+.inputNome{
+    grid-area: inputNome;
+}
+
+.emailLabel{
+    grid-area: emailLabel;
+}
+.emailInput{
+    grid-area: emailInput;
+}
+.senha{
+    grid-area: senha;
+}
+.inputSenha{
+    grid-area: inputSenha;
+}
+.repetInputSenha{
+    grid-area: repetInputSenha;
+    margin-top: 4px;
+}
+.submitButton{
+    grid-area: cadastroButton;
+    background-color: rgba(0, 0, 0, 0.247);
+    padding: 8px;
+    padding-inline: 12px;
+    color: rgba(255, 252, 252, 0.671);
+    border-radius: 8px;
+    margin-top: 6px;
+    border: none;
+    font-size: .8rem;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+}
+.button{
+    background: none;
+    appearance: none;
+    box-shadow: none;
+    border: none;
+}
+
+@media (width < 600px) {
+    .fieldset-form{
+        grid-template-columns:70% 20%;
+        grid-template-areas:
+        "nome nome"
+        "inputNome  inputNome"
+        "emailLabel emailLabel"
+        "emailInput emailInput"
+        "enderecoLabel endCompLabel"
+        "enderecoInput endCompInput"
+        "cidadeLabel  . "
+        "cidadeInput   . "
+        "telefoneLabel ."
+        "telefoneInput ."
+        "senha . "
+        "inputSenha . "
+        "repetInputSenha . "
+        ". . "
+        "cadastroButton . ";
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/register.css    " />
+    <link
+      href="https://fonts.googleapis.com/css?family=Barlow"
+      rel="stylesheet"
+    />
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="register-form" action="">
+        <fieldset class="fieldset-form">
+          <label class="nomeLabel" for="nome-input">Nome:</label>
+          <input
+            class="inputNome"
+            id="nome input"
+            placeholder="Nome completo"
+            type="text"
+          />
+
+          <label class="mailLabel" for="emailInput">Email:</label>
+          <input
+            class="emailInput"
+            id="emailInput"
+            placeholder="E-mail"
+            type="email"
+          />
+
+          <label class="enderecoLabel" for="enderecoInput">Endereço</label>
+          <input
+            type="text"
+            class="enderecoInput"
+            placeholder="Endereço"
+            id="enderecoInput"
+          />
+
+          <label class="endCompLabel" for="endCompInput">Numero:</label>
+          <input
+            class="endCompInput"
+            type="text"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+          />
+          <label class="telefoneLabel" for="">Telefone:</label>
+          <input
+            class="telefoneInput"
+            placeholder="telefone"
+            type="text"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+          />
+
+          <label class="cidadeLabel" for="cidadeId">Cidade:</label>
+          <input class="cidadeInput" placeholder="cidade" id="cidadeId" type="text" />
+          <label class="senha" for="password-input">Senha:</label>
+          <input
+            id="password-input"
+            class="inputSenha"
+            placeholder="Senha"
+            type="password"
+          />
+          <input
+            id="password-input"
+            class="repetInputSenha"
+            placeholder="Repita sua senha"
+            type="password"
+          />
+          <a class="submitButton" href="../html/login.html"
+            ><button class="button">Cadastro</button></a
+          >
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

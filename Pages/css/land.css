@@ -1,0 +1,72 @@
+@import "../css/styled.css";
+
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    background: url("../../assets/bg.jpg");
+    background-size: cover;
+}
+
+.invite{
+    width: 50vw;
+    height: 60vh;
+    background-color: var(--main-bg-nav-color);
+    border-radius: 12px;
+    animation: neon 3s linear infinite;
+}
+/* neon invite animação */
+
+
+
+@keyframes neon{
+    0%{
+        -webkit-box-shadow: 0px 0px 34px 3px rgba(22,117,52,1);
+        -moz-box-shadow: 0px 0px 34px 3px rgba(22,117,52,1);
+        box-shadow: 0px 0px 34px 3px rgba(22,117,52,1);
+    }
+    25%{
+        -webkit-box-shadow: 0px 0px 62px 3px rgb(166, 250, 144);
+        -moz-box-shadow: 0px 0px 62px 3px rgb(166, 250, 144);
+        box-shadow: 0px 0px 62px 3px rgb(166, 250, 144);
+    }
+    50%{
+        -webkit-box-shadow: 0px 0px 62px 3px rgba(51,255,0,1);
+        -moz-box-shadow: 0px 0px 62px 3px rgba(51,255,0,1);
+        box-shadow: 0px 0px 62px 3px rgba(51,255,0,1);
+
+    }
+    75%{
+        -webkit-box-shadow: 0px 0px 62px 3px rgba(60, 170, 32, 0.829);
+        -moz-box-shadow: 0px 0px 62px 3px rgba(60, 170, 32, 0.829);
+        box-shadow: 0px 0px 62px 3px rgba(60, 170, 32, 0.829);
+    }
+    100%{
+        -webkit-box-shadow: 0px 0px 34px 3px rgba(22,117,52,1);
+        -moz-box-shadow: 0px 0px 34px 3px rgba(22,117,52,1);
+        box-shadow: 0px 0px 34px 3px rgba(22,117,52,1);
+    }
+}
+/* letreiro */
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }

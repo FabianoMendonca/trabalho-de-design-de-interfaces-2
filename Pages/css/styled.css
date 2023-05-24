@@ -1,0 +1,13 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: clamp(16px, 18px, 22px);
+    font-family: 'Barlow';
+}
+
+:root {
+    --main-bg-color: #4b836b8c;
+    --main-bg-nav-color:rgba(96, 212, 112, 0.466);
+    --main-text-hover-color:#D9D487;
+  }
