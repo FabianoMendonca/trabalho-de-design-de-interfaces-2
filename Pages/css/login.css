@@ -57,16 +57,25 @@
     outline: 0;
 }
 
-.fieldset-form button:focus{
-    border: 0 none;
-    outline: 0;
+.submitButton{
+    padding: 8px;
+    padding-inline: 12px;
+    color: rgba(255, 252, 252, 0.671);
+    border-radius: 8px;
+    margin-top: 6px;
+    border: none;
+    font-size: .8rem;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+}
+.fieldset-form .button:focus{
     background-color: rgba(246, 247, 248, 0.527);
     color: rgba(0, 0, 0, 0.568);
 }
-.fieldset-form a button {
+.fieldset-form .button {
     background-color: rgba(0, 0, 0, 0.247);
     padding: 8px;
-    padding-inline: 12px;
     color: rgba(255, 252, 252, 0.671);
     border-radius: 8px;
     margin-top: 6px;
